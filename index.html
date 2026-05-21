@@ -3,12 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Oak Massage Spa | Relaxation & Therapeutic Massage in Glendale</title>
-  <meta name="description" content="Oak Massage Spa in Glendale, CA offers relaxation massage, deep tissue massage, four hands massage, cupping, guasha, and essential oil add-ons in a calm private space." />
+  <title>Oak Massage | Relaxation & Therapeutic Massage in Glendale</title>
+  <meta name="description" content="Oak Massage in Glendale, CA offers relaxation massage, deep tissue massage, four hands massage, cupping, guasha, and essential oil add-ons in a calm private space." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <script id="anywhere_book_now_script" type="text/javascript" src="https://assets.setmore.com/integration/book-now/live/v1/anywhere-book-now.js"></script>
 
   <style>
     :root {
@@ -149,19 +151,37 @@
       color: #fff;
     }
 
-    .nav-cta {
-      display: inline-flex;
+    .setmore-btn,
+    .nav-setmore-btn {
+      display: inline-flex !important;
       align-items: center;
       justify-content: center;
-      min-height: 42px;
-      padding: 0 18px;
-      border-radius: 999px;
-      color: #2b2118;
-      background: linear-gradient(135deg, #fff1ce, #d7a866);
-      font-size: 13px;
-      font-weight: 900;
-      box-shadow: 0 12px 30px rgba(215,168,102,.28);
+      min-height: 56px;
+      padding: 0 26px !important;
+      border: 1px solid transparent !important;
+      border-radius: 999px !important;
+      color: #2b2118 !important;
+      background: linear-gradient(135deg, #fff1ce, #d79d4e) !important;
+      font-family: "Inter", system-ui, sans-serif !important;
+      font-size: 15px !important;
+      font-weight: 900 !important;
+      line-height: 1 !important;
+      cursor: pointer !important;
+      box-shadow: 0 18px 44px rgba(215,157,78,.35) !important;
+      transition: transform .3s var(--ease), box-shadow .3s var(--ease) !important;
+    }
+
+    .setmore-btn:hover,
+    .nav-setmore-btn:hover {
+      transform: translateY(-3px);
+    }
+
+    .nav-setmore-btn {
+      min-height: 42px !important;
+      padding: 0 18px !important;
+      font-size: 13px !important;
       white-space: nowrap;
+      box-shadow: 0 12px 30px rgba(215,168,102,.28) !important;
     }
 
     .menu-btn {
@@ -350,12 +370,6 @@
 
     .btn:hover {
       transform: translateY(-3px);
-    }
-
-    .btn-primary {
-      color: #2b2118;
-      background: linear-gradient(135deg, #fff1ce, #d79d4e);
-      box-shadow: 0 18px 44px rgba(215,157,78,.35);
     }
 
     .btn-ghost {
@@ -770,7 +784,7 @@
     }
 
     .masonry-item::after {
-      content: "Oak Massage Spa";
+      content: "Oak Massage";
       position: absolute;
       left: 16px;
       bottom: 16px;
@@ -979,6 +993,14 @@
       font-weight: 700;
     }
 
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 28px;
+      align-items: center;
+    }
+
     .map-card {
       min-height: 470px;
     }
@@ -1047,8 +1069,8 @@
         padding: 13px 16px;
       }
 
-      .nav-cta {
-        display: none;
+      .nav-setmore-btn {
+        display: none !important;
       }
 
       .hero-grid,
@@ -1096,8 +1118,9 @@
         align-items: stretch;
       }
 
-      .btn {
-        width: 100%;
+      .btn,
+      .setmore-btn {
+        width: 100% !important;
       }
 
       .hero-card-img {
@@ -1143,9 +1166,9 @@
 
 <body>
   <nav class="nav" id="nav">
-    <a class="brand" href="#home" aria-label="Oak Massage Spa Home">
+    <a class="brand" href="#home" aria-label="Oak Massage Home">
       <span class="brand-mark">O</span>
-      <span>Oak Massage Spa</span>
+      <span>Oak Massage</span>
     </a>
 
     <button class="menu-btn" id="menuBtn" aria-label="Open navigation">☰</button>
@@ -1160,7 +1183,14 @@
       <li><a href="#contact">Contact</a></li>
     </ul>
 
-    <a class="nav-cta" href="#contact">Book Now</a>
+    <button
+      id="Anywhere_button_iframe_nav"
+      class="anywhere-book-now-button nav-setmore-btn"
+      data-booking-url="https://oakmassagespa.setmore.com"
+      data-new-tab="false"
+      type="button">
+      Book Now
+    </button>
   </nav>
 
   <main>
@@ -1181,12 +1211,19 @@
             slow your breathing, and leave feeling restored.
           </p>
           <div class="hero-actions reveal delay-3">
-            <a class="btn btn-primary" href="#contact">Book Now</a>
+            <button
+              id="Anywhere_button_iframe_hero"
+              class="anywhere-book-now-button setmore-btn"
+              data-booking-url="https://oakmassagespa.setmore.com"
+              data-new-tab="false"
+              type="button">
+              Book Now
+            </button>
             <a class="btn btn-ghost" href="tel:+12135885999">Call (213) 588-5999</a>
           </div>
         </div>
 
-        <aside class="hero-card reveal delay-2" data-parallax data-speed="0.18" aria-label="Oak Massage Spa highlights">
+        <aside class="hero-card reveal delay-2" data-parallax data-speed="0.18" aria-label="Oak Massage highlights">
           <div class="hero-card-inner">
             <div class="hero-card-img"></div>
             <div class="hero-card-body">
@@ -1221,18 +1258,18 @@
       <div class="container about-grid">
         <div class="about-visual reveal" data-parallax data-speed="0.08">
           <div class="about-photo large">
-            <img src="oak1.jpg" alt="Oak Massage Spa interior">
+            <img src="oak1.jpg" alt="Oak Massage interior">
           </div>
           <div class="about-photo small">
-            <img src="oak2.jpg" alt="Oak Massage Spa store detail">
+            <img src="oak2.jpg" alt="Oak Massage store detail">
           </div>
         </div>
 
         <div class="about-panel reveal delay-1" data-parallax data-speed="-0.05">
-          <div class="eyebrow">About Oak Massage Spa</div>
+          <div class="eyebrow">About Oak Massage</div>
           <h2>A quiet place to exhale.</h2>
           <p>
-            Oak Massage Spa is designed around a simple belief: relaxation begins the moment the environment feels clean,
+            Oak Massage is designed around a simple belief: relaxation begins the moment the environment feels clean,
             private, and calm. Every room is kept peaceful and uncluttered so your body can settle before the session begins.
           </p>
           <p>
@@ -1407,37 +1444,37 @@
       <div class="container">
         <div class="section-header reveal">
           <div class="eyebrow">Store Gallery</div>
-          <h2>A glimpse of Oak Massage Spa.</h2>
+          <h2>A glimpse of Oak Massage.</h2>
           <p>Explore the calm, simple, and welcoming environment designed for quiet relaxation in Glendale.</p>
         </div>
 
         <div class="masonry reveal">
           <a class="masonry-item" href="oak1.jpg" target="_blank" rel="noopener">
-            <img src="oak1.jpg" alt="Oak Massage Spa store photo 1">
+            <img src="oak1.jpg" alt="Oak Massage store photo 1">
           </a>
 
           <a class="masonry-item" href="oak2.jpg" target="_blank" rel="noopener">
-            <img src="oak2.jpg" alt="Oak Massage Spa store photo 2">
+            <img src="oak2.jpg" alt="Oak Massage store photo 2">
           </a>
 
           <a class="masonry-item" href="oak3.jpg" target="_blank" rel="noopener">
-            <img src="oak3.jpg" alt="Oak Massage Spa store photo 3">
+            <img src="oak3.jpg" alt="Oak Massage store photo 3">
           </a>
 
           <a class="masonry-item" href="oak4.jpg" target="_blank" rel="noopener">
-            <img src="oak4.jpg" alt="Oak Massage Spa store photo 4">
+            <img src="oak4.jpg" alt="Oak Massage store photo 4">
           </a>
 
           <a class="masonry-item" href="oak5.jpg" target="_blank" rel="noopener">
-            <img src="oak5.jpg" alt="Oak Massage Spa store photo 5">
+            <img src="oak5.jpg" alt="Oak Massage store photo 5">
           </a>
 
           <a class="masonry-item" href="oak6.jpg" target="_blank" rel="noopener">
-            <img src="oak6.jpg" alt="Oak Massage Spa store photo 6">
+            <img src="oak6.jpg" alt="Oak Massage store photo 6">
           </a>
 
           <a class="masonry-item" href="oak7.jpg" target="_blank" rel="noopener">
-            <img src="oak7.jpg" alt="Oak Massage Spa store photo 7">
+            <img src="oak7.jpg" alt="Oak Massage store photo 7">
           </a>
         </div>
       </div>
@@ -1447,7 +1484,7 @@
       <div class="container">
         <div class="section-header reveal">
           <div class="eyebrow">Guest Reviews</div>
-          <h2>What guests love about Oak Massage Spa.</h2>
+          <h2>What guests love about Oak Massage.</h2>
           <p>Calm rooms, easy booking, fair prices, and sessions that help everyday tension finally let go.</p>
         </div>
       </div>
@@ -1539,13 +1576,13 @@
       <div class="container">
         <div class="section-header reveal">
           <div class="eyebrow">Contact & Location</div>
-          <h2>Visit Oak Massage Spa in Glendale.</h2>
+          <h2>Visit Oak Massage in Glendale.</h2>
           <p>Open seven days a week for convenient relaxation, body work, and wellness services.</p>
         </div>
 
         <div class="contact-grid">
           <div class="contact-info reveal" data-parallax data-speed="0.07">
-            <h3>Oak Massage Spa</h3>
+            <h3>Oak Massage</h3>
             <p style="margin-top:14px;">A clean, private, and quiet massage space for daily relaxation and therapeutic comfort.</p>
 
             <ul class="info-list">
@@ -1563,12 +1600,22 @@
               </li>
             </ul>
 
-            <a class="btn btn-primary" style="margin-top:28px;" href="tel:+12135885999">Call to Book</a>
+            <div class="contact-actions">
+              <button
+                id="Anywhere_button_iframe_contact"
+                class="anywhere-book-now-button setmore-btn"
+                data-booking-url="https://oakmassagespa.setmore.com"
+                data-new-tab="false"
+                type="button">
+                Book Now
+              </button>
+              <a class="btn btn-ghost" href="tel:+12135885999">Call Now</a>
+            </div>
           </div>
 
           <div class="map-card reveal delay-1">
             <iframe
-              title="Google Map to Oak Massage Spa"
+              title="Google Map to Oak Massage"
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
               src="https://www.google.com/maps?q=1725%20S.%20Brand%20Blvd.%20Glendale%2C%20CA%2091204&output=embed">
@@ -1580,7 +1627,7 @@
   </main>
 
   <footer>
-    © <span id="year"></span> Oak Massage Spa. All rights reserved.
+    © <span id="year"></span> Oak Massage. All rights reserved.
   </footer>
 
   <script>
@@ -1706,8 +1753,6 @@
           a.classList.toggle("active", a.getAttribute("href") === `#${current.id}`);
         });
       }
-
-      requestAnimationFrame(() => {});
     }
 
     let ticking = false;
