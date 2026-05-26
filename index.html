@@ -738,6 +738,29 @@
       white-space: nowrap;
     }
 
+    .booking {
+      background:
+        radial-gradient(circle at 18% 10%, rgba(215,186,142,.30), transparent 30%),
+        linear-gradient(180deg, rgba(255,255,255,.12), rgba(239,227,210,.76));
+    }
+
+    .booking-card {
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 34px;
+      background: rgba(255,252,247,.74);
+      backdrop-filter: blur(20px);
+      box-shadow: var(--shadow);
+    }
+
+    .booking-frame {
+      width: 100%;
+      min-height: 820px;
+      border: 0;
+      background: #fff;
+      display: block;
+    }
+
     .gallery {
       background:
         radial-gradient(circle at 82% 8%, rgba(215,186,142,.28), transparent 28%),
@@ -1150,6 +1173,10 @@
       .map-card iframe {
         min-height: 380px;
       }
+
+      .booking-frame {
+        min-height: 760px;
+      }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -1184,14 +1211,12 @@
       <li><a href="#contact">Contact</a></li>
     </ul>
 
-    <button
+    <a
       id="Anywhere_button_iframe_nav"
-      class="anywhere-book-now-button nav-setmore-btn"
-      data-booking-url="https://oakmassagespa.setmore.com"
-      data-new-tab="false"
-      type="button">
+      class="nav-setmore-btn"
+      href="#booking">
       Book Now
-    </button>
+    </a>
   </nav>
 
   <main>
@@ -1212,14 +1237,12 @@
             slow your breathing, and leave feeling restored.
           </p>
           <div class="hero-actions reveal delay-3">
-            <button
+            <a
               id="Anywhere_button_iframe_hero"
-              class="anywhere-book-now-button setmore-btn"
-              data-booking-url="https://oakmassagespa.setmore.com"
-              data-new-tab="false"
-              type="button">
+              class="setmore-btn"
+              href="#booking">
               Book Now
-            </button>
+            </a>
             <a class="btn btn-ghost" href="tel:+12135885999">Call (213) 588-5999</a>
           </div>
         </div>
@@ -1441,6 +1464,27 @@
       </div>
     </section>
 
+    <section class="section booking" id="booking">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="eyebrow">Book Online</div>
+          <h2>Book your appointment here.</h2>
+          <p>
+            Choose your service, select a time, and enter your appointment details directly on this page through Setmore.
+          </p>
+        </div>
+
+        <div class="booking-card reveal delay-1">
+          <iframe
+            class="booking-frame"
+            title="Oak Massage Spa Setmore Online Booking"
+            loading="lazy"
+            src="https://oakmassagespa.setmore.com">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
     <section class="section gallery" id="gallery">
       <div class="container">
         <div class="section-header reveal">
@@ -1609,14 +1653,12 @@
             </ul>
 
             <div class="contact-actions">
-              <button
+              <a
                 id="Anywhere_button_iframe_contact"
-                class="anywhere-book-now-button setmore-btn"
-                data-booking-url="https://oakmassagespa.setmore.com"
-                data-new-tab="false"
-                type="button">
+                class="setmore-btn"
+                href="#booking">
                 Book Now
-              </button>
+              </a>
               <a class="btn btn-ghost" href="tel:+12135885999">Call Now</a>
             </div>
           </div>
